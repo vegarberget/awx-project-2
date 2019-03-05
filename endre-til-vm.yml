@@ -17,4 +17,4 @@
 #      customization:
 #        not: important
 #      customization_spec: "{{ VCENTER_GUEST_DOMAIN }}"
-      state: poweredon
+#      state: poweredon
