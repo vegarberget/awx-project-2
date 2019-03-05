@@ -13,8 +13,8 @@
 #      folder: "{{ VCENTER_FOLDER }}"
 #      cluster: "{{ VCENTER_CLUSTER }}"
       is_template: no
-      wait_for_ip_address: yes
-      customization:
-        not: important
-      customization_spec: "{{ VCENTER_GUEST_DOMAIN }}"
+#      wait_for_ip_address: yes
+#      customization:
+#        not: important
+#      customization_spec: "{{ VCENTER_GUEST_DOMAIN }}"
       state: poweredon
