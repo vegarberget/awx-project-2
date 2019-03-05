@@ -8,10 +8,10 @@
       validate_certs: False
       name: "{{ VCENTER_TEMPLATE }}"
 #      template: "{{ VCENTER_TEMPLATE }}"
-#      datacenter: "{{ VCENTER_DATACENTER }}"
-#      datastore: "{{ VCENTER_DATASTORE }}"
+      datacenter: "{{ VCENTER_DATACENTER }}"
+      datastore: "{{ VCENTER_DATASTORE }}"
 #      folder: "{{ VCENTER_FOLDER }}"
-#      cluster: "{{ VCENTER_CLUSTER }}"
+      cluster: "{{ VCENTER_CLUSTER }}"
       is_template: no
 #      wait_for_ip_address: yes
 #      customization:
