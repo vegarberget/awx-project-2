@@ -1,6 +1,6 @@
 ---
 - name: Install Windows Updates
-  hosts: "{{ VCENTER_TEMPLATE }}.lab.local"
+  hosts: "all"
 
   tasks:
   - name: Windows Update
