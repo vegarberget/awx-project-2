@@ -1,8 +1,0 @@
----
-- name: sleep for 300 seconds and continue with play
-  hosts: all 
-
-  tasks:
-  - name: sleep for 300 seconds and continue with play
-    wait_for: timeout=300
-    delegate_to: localhost
