@@ -1,6 +1,6 @@
 ---
-- name: Install Windows Updates
-  hosts: "{{ VCENTER_TEMPLATE }}.lab.local"
+- name: Install centos Updates
+  hosts: "all"
 
   tasks:
   - name: update the system
