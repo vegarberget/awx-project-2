@@ -1,0 +1,9 @@
+---
+- name: Install Windows Updates
+  hosts: "{{ VCENTER_TEMPLATE }}.lab.local"
+
+  tasks:
+  - name: update the system
+    yum:
+      name: "*"
+      state: latest
