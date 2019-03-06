@@ -8,8 +8,8 @@
                   port=5985
                   state=started
   - name: venter tjue sekunder
-   pause:
-     seconds: 20
+    pause:
+      seconds: 20
   - name: Windows Update
     win_updates:
       category_names:
