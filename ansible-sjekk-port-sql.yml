@@ -9,6 +9,7 @@
                 port=1433
                 state=started
                 timeout=900
+                
     - name: venter tjue sekunder
       pause:
         seconds: 20
