@@ -1,16 +1,16 @@
 ---
-- name: Install Windows Updates
-  hosts: "all"
-
-  tasks:
-  - name: wait for winrm port 5985 to come up 
+- name: wait for winrm port 5985 to come up 
     local_action: wait_for
                   host=WIN-17U3KGNNGA3
                   port=5985
                   state=started
-  - name: venter tjue sekunder
-    pause:
-      seconds: 20
+- name: venter tjue sekunder
+  pause:
+    seconds: 20
+- name: Install Windows Updates
+  hosts: "all"
+
+  tasks:
   - name: Windows Update
     win_updates:
       category_names:
