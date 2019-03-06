@@ -8,6 +8,7 @@
                 host="{{ VCENTER_GUEST_NAME_2 }}.lab.local"
                 port=1433
                 state=started
+                timeout=900
     - name: venter tjue sekunder
       pause:
         seconds: 20
