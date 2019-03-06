@@ -4,9 +4,9 @@
 
   tasks:
   - name: wait for winrm port 5985 to come up 
-  local_action: wait_for
-                port=5985
-                state=started
+    local_action: wait_for
+                  port=5985
+                  state=started
   - name: venter tjue sekunder
    pause:
      seconds: 20
