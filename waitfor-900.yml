@@ -1,0 +1,8 @@
+---
+- name: sjekk port
+  hosts: "{{ VCENTER_GUEST_NAME }}.lab.local"
+  connection: local
+  tasks:
+      - name: Wait for system to become reachable over WinRM
+    wait_for_connection:
+      timeout: 900
