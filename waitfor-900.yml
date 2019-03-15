@@ -1,6 +1,6 @@
 ---
 - name: sjekk port
-  hosts: "{{ VCENTER_GUEST_NAME }}.lab.local"
+  hosts: "{{ VCENTER_MILJO }}{{ VCENTER_GUEST_NAME }}.lab.local"
   connection: local
   tasks:
       - name: Wait for system to become reachable over WinRM

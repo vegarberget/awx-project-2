@@ -5,7 +5,7 @@
   tasks:
     - name: wait for winrm port 5985 to come up 
       local_action: wait_for
-                host="{{ VCENTER_GUEST_NAME_2 }}.lab.local"
+                host="{{ VCENTER_MILJO }}{{ VCENTER_GUEST_NAME_2 }}.lab.local"
                 port=5985
                 state=started
     - name: venter tjue sekunder
