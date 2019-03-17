@@ -11,7 +11,3 @@
     - name: venter tjue sekunder
       pause:
         seconds: 20
-
-- name: Wait for system to become reachable over WinRM
-    wait_for_connection:
-      timeout: 900
