@@ -1,7 +1,26 @@
 ---
-- name: Install Biztalk 2016
-  hosts: "{{ VCENTER_GUEST_NAME }}.lab.local, {{ VCENTER_GUEST_NAME_2 }}.lab.local"
+- name: enable TLSv1.2 support
+  win_regedit:
+    path: HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\{{ item.type }}
+    name: '{{ item.property }}'
+    data: '{{ item.value }}'
+    type: dword
+    state: present
+  register: enable_tls12
+  loop:
+  - type: Server
+    property: Enabled
+    value: 1
+  - type: Server
+    property: DisabledByDefault
+    value: 0
+  - type: Client
+    property: Enabled
+    value: 1
+  - type: Client
+    property: DisabledByDefault
+    value: 0
 
-  tasks:
-  - name: Testing command
-    win_command: dir
+- name: reboot if TLS config was applied
+  win_reboot:
+  when: enable_tls12 is changed
